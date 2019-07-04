@@ -23,3 +23,61 @@ It doesn't look "branchy" or "tree like", however it is still a tree since it me
 In a binary tree there is one further restriction on a tree compared to the "generalized" tree.  Each node can have no more than two children.  It is also important to note that the orientation of the children as right or left child also matters.  
 ![binary tree and node example](img/bin_tree.png)  
 In the above example the there is a tree to the left which is considered a binary tree because it respects the limit of each node having at most two children.  To the right there is an illustration ofthe order/oritenation nodes matters in a graph.
+
+### Traversals of trees
+There are two main ways of traversing any type of tree.  They are the pre-order traversal, and post-order traversal.  There is also another type of traversal called the in-order trversal that applies to binary trees.
+#### Pre-order traversal
+preOrderTraverse( n )In a pre-order traversal the traversal visits the parent first and then traverses the left and right children.  When traversing the left and right chilren the traversal visits the node in question first and then traverses its left and right children.  
+Below is come pseudo-code for pre-order traversal:  
+```
+preOrderTraverseGraph( g )//g is the graph object which contains the nodes including the root node
+{
+	preOrderTraverse(g.rootNode)
+}
+
+preOrderTraverse( n )//n is a node in the graph
+{
+	visit(n)
+	preOrderTraverse( n.leftChild  )
+	preOrderTraverse( n.rightChild )
+}
+
+visit( n )// performs some action using the data in the node(in this case we print out the nodes id)
+{
+	print(n.id)
+}
+```
+If this pseudo code were used to traverse the example binary tree above the result would be:  
+```1,2,4,5,7,8,11,3,6,9,12,13,10```
+
+#### Post-order traversal
+In a post-order traversal the traversal traverses the left and right children **first** and only then visits the parent.  When traversing the left and right chilren the traversal first traverses the node in questions children and only then visits the node.  
+Below is come pseudo-code for post-order traversal:  
+```
+postOrderTraverseGraph( g )//g is the graph object which contains the nodes including the root node
+{
+	postOrderTraverse(g.rootNode)
+}
+
+postOrderTraverse( n )//n is a node in the graph
+{
+	preOrderTraverse( n.leftChild  )
+	preOrderTraverse( n.rightChild )
+	visit(n)
+}
+
+visit( n )// performs some action using the data in the node(in this case we print out the nodes id)
+{
+	print(n.id)
+}
+```
+If this pseudo code were used to traverse the example binary tree above the result would be:  
+```4,7,11,8,5,2,12,13,9,10,6,3,1```
+
+
+
+
+
+
+
+
