@@ -1,3 +1,4 @@
+# Binary Tree Reconstruction
 
 ## Description of involved data structures and concepts
 This problem statement is meant to be accessible to new programmers who do not have that much experience with Data Structures.  If you feel confident that you understand these data structures and concepts feel free to ignore this section
@@ -17,3 +18,8 @@ It is important to note that there are some trees that "don't look like trees" a
 Consider The tree below:  
 ![linear tree example](img/line_tree.png)  
 It doesn't look "branchy" or "tree like", however it is still a tree since it meets the requirements of a tree.  Node 1 is the root and parent of node 2. Node 2 is the parent of node 3.  Node 3 is the parent of node 4, and node 4 is the only leaf node in this tree.  I also want to not that a single isolated node counts as a tree since is meets the formal requirements for a tree.
+
+#### Binary Trees
+In a binary tree there is one further restriction on a tree compared to the "generalized" tree.  Each node can have no more than two children.  It is also important to note that the orientation of the children as right or left child also matters.  
+![binary tree and node example](img/bin_tree.png)  
+In the above example the there is a tree to the left which is considered a binary tree because it respects the limit of each node having at most two children.  To the right there is an illustration ofthe order/oritenation nodes matters in a graph.
