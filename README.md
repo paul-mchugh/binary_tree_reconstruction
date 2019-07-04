@@ -15,5 +15,5 @@ The formal definition of a tree is a set on nodes **N** and a set of parent-chil
 
 It is important to note that there are some trees that "don't look like trees" at least at first glance.  
 Consider The tree below:  
-![linear tree example](img/line_tree.png)
+![linear tree example](img/line_tree.png)  
 It doesn't look "branchy" or "tree like", however it is still a tree since it meets the requirements of a tree.  Node 1 is the root and parent of node 2. Node 2 is the parent of node 3.  Node 3 is the parent of node 4, and node 4 is the only leaf node in this tree.  I also want to not that a single isolated node counts as a tree since is meets the formal requirements for a tree.
